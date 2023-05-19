@@ -1,0 +1,33 @@
+{
+    "name": "talently/mixpanel",
+    "version": "0.0.1",
+    "description": "Paquete para enviar datos a la plataforma de MixPanel.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jhorman Alexander Tasayco Tasayco",
+            "email": "jhormantasayco@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2|^8.1",
+        "mixpanel/mixpanel-php": "2.*",
+        "illuminate/support": "^6.0|^7.0|^8.0|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MixPanel\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MixPanel\\Providers\\MixPanelServiceProvider"
+            ],
+            "aliases": {
+                "MixPanel": "MixPanel\\Facades\\MixPanel"
+            }
+        }
+    }
+}
