@@ -13,7 +13,9 @@ class MixPanelServiceProvider extends ServiceProvider
     {
         $this->app->singleton(
             MixPanelWebAnalyticsManager::class,
-            fn (Application $app) => new MixPanelWebAnalyticsManager($app)
+            function (Application $app) {
+               return new MixPanelWebAnalyticsManager($app);
+            }
         );
         
         $this->mergeConfigFrom(
